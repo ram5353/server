@@ -6,6 +6,10 @@ app.use(cors());
 app.use(express.json());
 global.__basedir = __dirname;
 
+app.get("/test", (req, res) => {
+  res.send("<h1>It's working 🤗</h1>")
+})
+
 const authenticateUserRouter = require("./routes/authenticateUser");
 const createNewUserRouter = require("./routes/createNewUser");
 const sampleDataSetRouter = require("./routes/sampleDataSetRouter");
